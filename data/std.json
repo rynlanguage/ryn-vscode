@@ -1,0 +1,2930 @@
+{
+ "generatedFrom": "Ryn stdlib",
+ "modules": {
+  "env": [
+   {
+    "kind": "function",
+    "name": "get",
+    "module": "std::env",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun get(name: str) -> String",
+    "params": [
+     "name: str"
+    ],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "env",
+    "module": "std::env",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun env(name: str) -> String",
+    "params": [
+     "name: str"
+    ],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "set",
+    "module": "std::env",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun set(name: str, value: str) -> bool",
+    "params": [
+     "name: str",
+     "value: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "set_env",
+    "module": "std::env",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun set_env(name: str, value: str) -> bool",
+    "params": [
+     "name: str",
+     "value: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "remove",
+    "module": "std::env",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun remove(name: str) -> bool",
+    "params": [
+     "name: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "current_dir",
+    "module": "std::env",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun current_dir() -> String",
+    "params": [],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "set_current_dir",
+    "module": "std::env",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun set_current_dir(path: str) -> bool",
+    "params": [
+     "path: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "home_dir",
+    "module": "std::env",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun home_dir() -> String",
+    "params": [],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "temp_dir",
+    "module": "std::env",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun temp_dir() -> String",
+    "params": [],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "executable_path",
+    "module": "std::env",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun executable_path() -> String",
+    "params": [],
+    "returns": "String",
+    "doc": ""
+   }
+  ],
+  "fs": [
+   {
+    "kind": "function",
+    "name": "read",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun read(path: str) -> String",
+    "params": [
+     "path: str"
+    ],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "read_text",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun read_text(path: str) -> String",
+    "params": [
+     "path: str"
+    ],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "read_file",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun read_file(path: str) -> String",
+    "params": [
+     "path: str"
+    ],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "write",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun write(path: str, data: str) -> bool",
+    "params": [
+     "path: str",
+     "data: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "append",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun append(path: str, data: str) -> bool",
+    "params": [
+     "path: str",
+     "data: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "create_dir",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun create_dir(path: str) -> bool",
+    "params": [
+     "path: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "create_dir_all",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun create_dir_all(path: str) -> bool",
+    "params": [
+     "path: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "remove_file",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun remove_file(path: str) -> bool",
+    "params": [
+     "path: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "remove_dir",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun remove_dir(path: str) -> bool",
+    "params": [
+     "path: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "remove_dir_all",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun remove_dir_all(path: str) -> bool",
+    "params": [
+     "path: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "copy_file",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun copy_file(from: str, to: str) -> bool",
+    "params": [
+     "from: str",
+     "to: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "move_file",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun move_file(from: str, to: str) -> bool",
+    "params": [
+     "from: str",
+     "to: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "rename",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun rename(from: str, to: str) -> bool",
+    "params": [
+     "from: str",
+     "to: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "read_dir",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun read_dir(path: str) -> Vec<String>",
+    "params": [
+     "path: str"
+    ],
+    "returns": "Vec<String>",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "exists",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun exists(path: str) -> bool",
+    "params": [
+     "path: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "is_file",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun is_file(path: str) -> bool",
+    "params": [
+     "path: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "is_dir",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun is_dir(path: str) -> bool",
+    "params": [
+     "path: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "struct",
+    "name": "File",
+    "module": "std::fs",
+    "pub": true,
+    "doc": "",
+    "signature": "struct File"
+   },
+   {
+    "kind": "field",
+    "name": "handle",
+    "module": "std::fs",
+    "owner": "File",
+    "pub": true,
+    "returns": "*u8",
+    "signature": "handle: *u8",
+    "doc": ""
+   },
+   {
+    "kind": "associated",
+    "name": "open",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "File",
+    "signature": "pub fun open(path: str) -> File",
+    "params": [
+     "path: str"
+    ],
+    "returns": "File",
+    "doc": ""
+   },
+   {
+    "kind": "associated",
+    "name": "create",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "File",
+    "signature": "pub fun create(path: str) -> File",
+    "params": [
+     "path: str"
+    ],
+    "returns": "File",
+    "doc": ""
+   },
+   {
+    "kind": "associated",
+    "name": "append",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "File",
+    "signature": "pub fun append(path: str, data: str) -> bool",
+    "params": [
+     "path: str",
+     "data: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "associated",
+    "name": "read",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "File",
+    "signature": "pub fun read(path: str) -> String",
+    "params": [
+     "path: str"
+    ],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "associated",
+    "name": "read_text",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "File",
+    "signature": "pub fun read_text(path: str) -> String",
+    "params": [
+     "path: str"
+    ],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "associated",
+    "name": "write",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "File",
+    "signature": "pub fun write(path: str, data: str) -> bool",
+    "params": [
+     "path: str",
+     "data: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "read",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "File",
+    "signature": "pub fun read(mut self) -> String",
+    "params": [],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "read_line",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "File",
+    "signature": "pub fun read_line(mut self) -> String",
+    "params": [],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "read_text",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "File",
+    "signature": "pub fun read_text(mut self) -> String",
+    "params": [],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "write",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "File",
+    "signature": "pub fun write(mut self, data: str) -> bool",
+    "params": [
+     "data: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "flush",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "File",
+    "signature": "pub fun flush(mut self) -> bool",
+    "params": [],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "close",
+    "module": "std::fs",
+    "pub": true,
+    "owner": "File",
+    "signature": "pub fun close(mut self) -> bool",
+    "params": [],
+    "returns": "bool",
+    "doc": ""
+   }
+  ],
+  "io": [
+   {
+    "kind": "function",
+    "name": "print",
+    "module": "std::io",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun print(value: str)",
+    "params": [
+     "value: str"
+    ],
+    "returns": "",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "println",
+    "module": "std::io",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun println(value: str)",
+    "params": [
+     "value: str"
+    ],
+    "returns": "",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "eprint",
+    "module": "std::io",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun eprint(value: str)",
+    "params": [
+     "value: str"
+    ],
+    "returns": "",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "eprintln",
+    "module": "std::io",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun eprintln(value: str)",
+    "params": [
+     "value: str"
+    ],
+    "returns": "",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "read_line",
+    "module": "std::io",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun read_line() -> String",
+    "params": [],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "ask",
+    "module": "std::io",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun ask(prompt: str) -> String",
+    "params": [
+     "prompt: str"
+    ],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "stdin_read",
+    "module": "std::io",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun stdin_read() -> String",
+    "params": [],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "stdin_read_line",
+    "module": "std::io",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun stdin_read_line() -> String",
+    "params": [],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "stdout_write",
+    "module": "std::io",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun stdout_write(value: str)",
+    "params": [
+     "value: str"
+    ],
+    "returns": "",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "stderr_write",
+    "module": "std::io",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun stderr_write(value: str)",
+    "params": [
+     "value: str"
+    ],
+    "returns": "",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "stdout_flush",
+    "module": "std::io",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun stdout_flush()",
+    "params": [],
+    "returns": "",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "stderr_flush",
+    "module": "std::io",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun stderr_flush()",
+    "params": [],
+    "returns": "",
+    "doc": ""
+   }
+  ],
+  "keyboard": [
+   {
+    "kind": "enum",
+    "name": "Key",
+    "module": "std::keyboard",
+    "pub": true,
+    "doc": "",
+    "signature": "enum Key"
+   },
+   {
+    "kind": "variant",
+    "name": "Unknown",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Unknown"
+   },
+   {
+    "kind": "variant",
+    "name": "A",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::A"
+   },
+   {
+    "kind": "variant",
+    "name": "B",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::B"
+   },
+   {
+    "kind": "variant",
+    "name": "C",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::C"
+   },
+   {
+    "kind": "variant",
+    "name": "D",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::D"
+   },
+   {
+    "kind": "variant",
+    "name": "E",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::E"
+   },
+   {
+    "kind": "variant",
+    "name": "F",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::F"
+   },
+   {
+    "kind": "variant",
+    "name": "G",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::G"
+   },
+   {
+    "kind": "variant",
+    "name": "H",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::H"
+   },
+   {
+    "kind": "variant",
+    "name": "I",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::I"
+   },
+   {
+    "kind": "variant",
+    "name": "J",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::J"
+   },
+   {
+    "kind": "variant",
+    "name": "K",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::K"
+   },
+   {
+    "kind": "variant",
+    "name": "L",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::L"
+   },
+   {
+    "kind": "variant",
+    "name": "M",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::M"
+   },
+   {
+    "kind": "variant",
+    "name": "N",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::N"
+   },
+   {
+    "kind": "variant",
+    "name": "O",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::O"
+   },
+   {
+    "kind": "variant",
+    "name": "P",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::P"
+   },
+   {
+    "kind": "variant",
+    "name": "Q",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Q"
+   },
+   {
+    "kind": "variant",
+    "name": "R",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::R"
+   },
+   {
+    "kind": "variant",
+    "name": "S",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::S"
+   },
+   {
+    "kind": "variant",
+    "name": "T",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::T"
+   },
+   {
+    "kind": "variant",
+    "name": "U",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::U"
+   },
+   {
+    "kind": "variant",
+    "name": "V",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::V"
+   },
+   {
+    "kind": "variant",
+    "name": "W",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::W"
+   },
+   {
+    "kind": "variant",
+    "name": "X",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::X"
+   },
+   {
+    "kind": "variant",
+    "name": "Y",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Y"
+   },
+   {
+    "kind": "variant",
+    "name": "Z",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Z"
+   },
+   {
+    "kind": "variant",
+    "name": "Digit0",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Digit0"
+   },
+   {
+    "kind": "variant",
+    "name": "Digit1",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Digit1"
+   },
+   {
+    "kind": "variant",
+    "name": "Digit2",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Digit2"
+   },
+   {
+    "kind": "variant",
+    "name": "Digit3",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Digit3"
+   },
+   {
+    "kind": "variant",
+    "name": "Digit4",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Digit4"
+   },
+   {
+    "kind": "variant",
+    "name": "Digit5",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Digit5"
+   },
+   {
+    "kind": "variant",
+    "name": "Digit6",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Digit6"
+   },
+   {
+    "kind": "variant",
+    "name": "Digit7",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Digit7"
+   },
+   {
+    "kind": "variant",
+    "name": "Digit8",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Digit8"
+   },
+   {
+    "kind": "variant",
+    "name": "Digit9",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Digit9"
+   },
+   {
+    "kind": "variant",
+    "name": "Space",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Space"
+   },
+   {
+    "kind": "variant",
+    "name": "Enter",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Enter"
+   },
+   {
+    "kind": "variant",
+    "name": "Escape",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Escape"
+   },
+   {
+    "kind": "variant",
+    "name": "Tab",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Tab"
+   },
+   {
+    "kind": "variant",
+    "name": "Backspace",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Backspace"
+   },
+   {
+    "kind": "variant",
+    "name": "Delete",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Delete"
+   },
+   {
+    "kind": "variant",
+    "name": "Insert",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Insert"
+   },
+   {
+    "kind": "variant",
+    "name": "Home",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Home"
+   },
+   {
+    "kind": "variant",
+    "name": "End",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::End"
+   },
+   {
+    "kind": "variant",
+    "name": "PageUp",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::PageUp"
+   },
+   {
+    "kind": "variant",
+    "name": "PageDown",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::PageDown"
+   },
+   {
+    "kind": "variant",
+    "name": "ArrowUp",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::ArrowUp"
+   },
+   {
+    "kind": "variant",
+    "name": "ArrowDown",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::ArrowDown"
+   },
+   {
+    "kind": "variant",
+    "name": "ArrowLeft",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::ArrowLeft"
+   },
+   {
+    "kind": "variant",
+    "name": "ArrowRight",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::ArrowRight"
+   },
+   {
+    "kind": "variant",
+    "name": "Shift",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Shift"
+   },
+   {
+    "kind": "variant",
+    "name": "LeftShift",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::LeftShift"
+   },
+   {
+    "kind": "variant",
+    "name": "RightShift",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::RightShift"
+   },
+   {
+    "kind": "variant",
+    "name": "Ctrl",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Ctrl"
+   },
+   {
+    "kind": "variant",
+    "name": "LeftCtrl",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::LeftCtrl"
+   },
+   {
+    "kind": "variant",
+    "name": "RightCtrl",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::RightCtrl"
+   },
+   {
+    "kind": "variant",
+    "name": "Alt",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Alt"
+   },
+   {
+    "kind": "variant",
+    "name": "LeftAlt",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::LeftAlt"
+   },
+   {
+    "kind": "variant",
+    "name": "RightAlt",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::RightAlt"
+   },
+   {
+    "kind": "variant",
+    "name": "CapsLock",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::CapsLock"
+   },
+   {
+    "kind": "variant",
+    "name": "NumLock",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::NumLock"
+   },
+   {
+    "kind": "variant",
+    "name": "ScrollLock",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::ScrollLock"
+   },
+   {
+    "kind": "variant",
+    "name": "F1",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::F1"
+   },
+   {
+    "kind": "variant",
+    "name": "F2",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::F2"
+   },
+   {
+    "kind": "variant",
+    "name": "F3",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::F3"
+   },
+   {
+    "kind": "variant",
+    "name": "F4",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::F4"
+   },
+   {
+    "kind": "variant",
+    "name": "F5",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::F5"
+   },
+   {
+    "kind": "variant",
+    "name": "F6",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::F6"
+   },
+   {
+    "kind": "variant",
+    "name": "F7",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::F7"
+   },
+   {
+    "kind": "variant",
+    "name": "F8",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::F8"
+   },
+   {
+    "kind": "variant",
+    "name": "F9",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::F9"
+   },
+   {
+    "kind": "variant",
+    "name": "F10",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::F10"
+   },
+   {
+    "kind": "variant",
+    "name": "F11",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::F11"
+   },
+   {
+    "kind": "variant",
+    "name": "F12",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::F12"
+   },
+   {
+    "kind": "variant",
+    "name": "Backtick",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Backtick"
+   },
+   {
+    "kind": "variant",
+    "name": "Minus",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Minus"
+   },
+   {
+    "kind": "variant",
+    "name": "Equal",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Equal"
+   },
+   {
+    "kind": "variant",
+    "name": "LeftBracket",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::LeftBracket"
+   },
+   {
+    "kind": "variant",
+    "name": "RightBracket",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::RightBracket"
+   },
+   {
+    "kind": "variant",
+    "name": "Backslash",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Backslash"
+   },
+   {
+    "kind": "variant",
+    "name": "Semicolon",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Semicolon"
+   },
+   {
+    "kind": "variant",
+    "name": "Quote",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Quote"
+   },
+   {
+    "kind": "variant",
+    "name": "Comma",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Comma"
+   },
+   {
+    "kind": "variant",
+    "name": "Period",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Period"
+   },
+   {
+    "kind": "variant",
+    "name": "Slash",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Slash"
+   },
+   {
+    "kind": "variant",
+    "name": "Numpad0",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Numpad0"
+   },
+   {
+    "kind": "variant",
+    "name": "Numpad1",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Numpad1"
+   },
+   {
+    "kind": "variant",
+    "name": "Numpad2",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Numpad2"
+   },
+   {
+    "kind": "variant",
+    "name": "Numpad3",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Numpad3"
+   },
+   {
+    "kind": "variant",
+    "name": "Numpad4",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Numpad4"
+   },
+   {
+    "kind": "variant",
+    "name": "Numpad5",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Numpad5"
+   },
+   {
+    "kind": "variant",
+    "name": "Numpad6",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Numpad6"
+   },
+   {
+    "kind": "variant",
+    "name": "Numpad7",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Numpad7"
+   },
+   {
+    "kind": "variant",
+    "name": "Numpad8",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Numpad8"
+   },
+   {
+    "kind": "variant",
+    "name": "Numpad9",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Numpad9"
+   },
+   {
+    "kind": "variant",
+    "name": "NumpadAdd",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::NumpadAdd"
+   },
+   {
+    "kind": "variant",
+    "name": "NumpadSubtract",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::NumpadSubtract"
+   },
+   {
+    "kind": "variant",
+    "name": "NumpadMultiply",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::NumpadMultiply"
+   },
+   {
+    "kind": "variant",
+    "name": "NumpadDivide",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::NumpadDivide"
+   },
+   {
+    "kind": "variant",
+    "name": "NumpadDecimal",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::NumpadDecimal"
+   },
+   {
+    "kind": "variant",
+    "name": "NumpadEnter",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::NumpadEnter"
+   },
+   {
+    "kind": "variant",
+    "name": "PrintScreen",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::PrintScreen"
+   },
+   {
+    "kind": "variant",
+    "name": "Pause",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Pause"
+   },
+   {
+    "kind": "variant",
+    "name": "Menu",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::Menu"
+   },
+   {
+    "kind": "variant",
+    "name": "LeftSuper",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::LeftSuper"
+   },
+   {
+    "kind": "variant",
+    "name": "RightSuper",
+    "module": "std::keyboard",
+    "owner": "Key",
+    "pub": true,
+    "doc": "",
+    "signature": "Key::RightSuper"
+   },
+   {
+    "kind": "function",
+    "name": "key_down",
+    "module": "std::keyboard",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun key_down(key: Key) -> bool",
+    "params": [
+     "key: Key"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "key_pressed",
+    "module": "std::keyboard",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun key_pressed(key: Key) -> bool",
+    "params": [
+     "key: Key"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "key_released",
+    "module": "std::keyboard",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun key_released(key: Key) -> bool",
+    "params": [
+     "key: Key"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "read_key",
+    "module": "std::keyboard",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun read_key() -> Key",
+    "params": [],
+    "returns": "Key",
+    "doc": ""
+   }
+  ],
+  "math": [
+   {
+    "kind": "function",
+    "name": "abs",
+    "module": "std::math",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun abs(value: f64) -> f64",
+    "params": [
+     "value: f64"
+    ],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "min",
+    "module": "std::math",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun min(left: f64, right: f64) -> f64",
+    "params": [
+     "left: f64",
+     "right: f64"
+    ],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "max",
+    "module": "std::math",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun max(left: f64, right: f64) -> f64",
+    "params": [
+     "left: f64",
+     "right: f64"
+    ],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "clamp",
+    "module": "std::math",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun clamp(value: f64, min_value: f64, max_value: f64) -> f64",
+    "params": [
+     "value: f64",
+     "min_value: f64",
+     "max_value: f64"
+    ],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "sqrt",
+    "module": "std::math",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun sqrt(value: f64) -> f64",
+    "params": [
+     "value: f64"
+    ],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "pow",
+    "module": "std::math",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun pow(value: f64, exponent: f64) -> f64",
+    "params": [
+     "value: f64",
+     "exponent: f64"
+    ],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "floor",
+    "module": "std::math",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun floor(value: f64) -> f64",
+    "params": [
+     "value: f64"
+    ],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "ceil",
+    "module": "std::math",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun ceil(value: f64) -> f64",
+    "params": [
+     "value: f64"
+    ],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "round",
+    "module": "std::math",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun round(value: f64) -> f64",
+    "params": [
+     "value: f64"
+    ],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "sin",
+    "module": "std::math",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun sin(value: f64) -> f64",
+    "params": [
+     "value: f64"
+    ],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "cos",
+    "module": "std::math",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun cos(value: f64) -> f64",
+    "params": [
+     "value: f64"
+    ],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "tan",
+    "module": "std::math",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun tan(value: f64) -> f64",
+    "params": [
+     "value: f64"
+    ],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "log",
+    "module": "std::math",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun log(value: f64) -> f64",
+    "params": [
+     "value: f64"
+    ],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "log2",
+    "module": "std::math",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun log2(value: f64) -> f64",
+    "params": [
+     "value: f64"
+    ],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "log10",
+    "module": "std::math",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun log10(value: f64) -> f64",
+    "params": [
+     "value: f64"
+    ],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "random",
+    "module": "std::math",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun random() -> f64",
+    "params": [],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "random_range",
+    "module": "std::math",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun random_range(min_value: f64, max_value: f64) -> f64",
+    "params": [
+     "min_value: f64",
+     "max_value: f64"
+    ],
+    "returns": "f64",
+    "doc": ""
+   }
+  ],
+  "net": [
+   {
+    "kind": "struct",
+    "name": "TcpStream",
+    "module": "std::net",
+    "pub": true,
+    "doc": "",
+    "signature": "struct TcpStream"
+   },
+   {
+    "kind": "field",
+    "name": "handle",
+    "module": "std::net",
+    "owner": "TcpStream",
+    "pub": true,
+    "returns": "*u8",
+    "signature": "handle: *u8",
+    "doc": ""
+   },
+   {
+    "kind": "struct",
+    "name": "TcpListener",
+    "module": "std::net",
+    "pub": true,
+    "doc": "",
+    "signature": "struct TcpListener"
+   },
+   {
+    "kind": "field",
+    "name": "handle",
+    "module": "std::net",
+    "owner": "TcpListener",
+    "pub": true,
+    "returns": "*u8",
+    "signature": "handle: *u8",
+    "doc": ""
+   },
+   {
+    "kind": "struct",
+    "name": "UdpSocket",
+    "module": "std::net",
+    "pub": true,
+    "doc": "",
+    "signature": "struct UdpSocket"
+   },
+   {
+    "kind": "field",
+    "name": "handle",
+    "module": "std::net",
+    "owner": "UdpSocket",
+    "pub": true,
+    "returns": "*u8",
+    "signature": "handle: *u8",
+    "doc": ""
+   },
+   {
+    "kind": "associated",
+    "name": "connect",
+    "module": "std::net",
+    "pub": true,
+    "owner": "TcpStream",
+    "signature": "pub fun connect(address: str) -> TcpStream",
+    "params": [
+     "address: str"
+    ],
+    "returns": "TcpStream",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "read",
+    "module": "std::net",
+    "pub": true,
+    "owner": "TcpStream",
+    "signature": "pub fun read(mut self) -> String",
+    "params": [],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "write",
+    "module": "std::net",
+    "pub": true,
+    "owner": "TcpStream",
+    "signature": "pub fun write(mut self, data: str) -> bool",
+    "params": [
+     "data: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "close",
+    "module": "std::net",
+    "pub": true,
+    "owner": "TcpStream",
+    "signature": "pub fun close(mut self) -> bool",
+    "params": [],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "associated",
+    "name": "bind",
+    "module": "std::net",
+    "pub": true,
+    "owner": "TcpListener",
+    "signature": "pub fun bind(address: str) -> TcpListener",
+    "params": [
+     "address: str"
+    ],
+    "returns": "TcpListener",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "accept",
+    "module": "std::net",
+    "pub": true,
+    "owner": "TcpListener",
+    "signature": "pub fun accept(mut self) -> TcpStream",
+    "params": [],
+    "returns": "TcpStream",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "close",
+    "module": "std::net",
+    "pub": true,
+    "owner": "TcpListener",
+    "signature": "pub fun close(mut self) -> bool",
+    "params": [],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "associated",
+    "name": "bind",
+    "module": "std::net",
+    "pub": true,
+    "owner": "UdpSocket",
+    "signature": "pub fun bind(address: str) -> UdpSocket",
+    "params": [
+     "address: str"
+    ],
+    "returns": "UdpSocket",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "connect",
+    "module": "std::net",
+    "pub": true,
+    "owner": "UdpSocket",
+    "signature": "pub fun connect(mut self, address: str) -> bool",
+    "params": [
+     "address: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "read",
+    "module": "std::net",
+    "pub": true,
+    "owner": "UdpSocket",
+    "signature": "pub fun read(mut self) -> String",
+    "params": [],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "write",
+    "module": "std::net",
+    "pub": true,
+    "owner": "UdpSocket",
+    "signature": "pub fun write(mut self, data: str) -> bool",
+    "params": [
+     "data: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "close",
+    "module": "std::net",
+    "pub": true,
+    "owner": "UdpSocket",
+    "signature": "pub fun close(mut self) -> bool",
+    "params": [],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "struct",
+    "name": "Dns",
+    "module": "std::net",
+    "pub": true,
+    "doc": "",
+    "signature": "struct Dns"
+   },
+   {
+    "kind": "associated",
+    "name": "resolve",
+    "module": "std::net",
+    "pub": true,
+    "owner": "Dns",
+    "signature": "pub fun resolve(host: str) -> Vec<String>",
+    "params": [
+     "host: str"
+    ],
+    "returns": "Vec<String>",
+    "doc": ""
+   }
+  ],
+  "option": [],
+  "path": [
+   {
+    "kind": "struct",
+    "name": "Path",
+    "module": "std::path",
+    "pub": true,
+    "doc": "",
+    "signature": "struct Path"
+   },
+   {
+    "kind": "field",
+    "name": "raw",
+    "module": "std::path",
+    "owner": "Path",
+    "pub": true,
+    "returns": "String",
+    "signature": "raw: String",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "new",
+    "module": "std::path",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun new(value: str) -> Path",
+    "params": [
+     "value: str"
+    ],
+    "returns": "Path",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "from",
+    "module": "std::path",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun from(value: str) -> Path",
+    "params": [
+     "value: str"
+    ],
+    "returns": "Path",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "exists",
+    "module": "std::path",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun exists(value: str) -> bool",
+    "params": [
+     "value: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "is_file",
+    "module": "std::path",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun is_file(value: str) -> bool",
+    "params": [
+     "value: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "is_dir",
+    "module": "std::path",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun is_dir(value: str) -> bool",
+    "params": [
+     "value: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "associated",
+    "name": "new",
+    "module": "std::path",
+    "pub": true,
+    "owner": "Path",
+    "signature": "pub fun new(value: str) -> Path",
+    "params": [
+     "value: str"
+    ],
+    "returns": "Path",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "exists",
+    "module": "std::path",
+    "pub": true,
+    "owner": "Path",
+    "signature": "pub fun exists(self) -> bool",
+    "params": [],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "is_file",
+    "module": "std::path",
+    "pub": true,
+    "owner": "Path",
+    "signature": "pub fun is_file(self) -> bool",
+    "params": [],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "is_dir",
+    "module": "std::path",
+    "pub": true,
+    "owner": "Path",
+    "signature": "pub fun is_dir(self) -> bool",
+    "params": [],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "is_directory",
+    "module": "std::path",
+    "pub": true,
+    "owner": "Path",
+    "signature": "pub fun is_directory(self) -> bool",
+    "params": [],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "is_absolute",
+    "module": "std::path",
+    "pub": true,
+    "owner": "Path",
+    "signature": "pub fun is_absolute(self) -> bool",
+    "params": [],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "filename",
+    "module": "std::path",
+    "pub": true,
+    "owner": "Path",
+    "signature": "pub fun filename(self) -> String",
+    "params": [],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "extension",
+    "module": "std::path",
+    "pub": true,
+    "owner": "Path",
+    "signature": "pub fun extension(self) -> String",
+    "params": [],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "parent",
+    "module": "std::path",
+    "pub": true,
+    "owner": "Path",
+    "signature": "pub fun parent(self) -> Path",
+    "params": [],
+    "returns": "Path",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "join",
+    "module": "std::path",
+    "pub": true,
+    "owner": "Path",
+    "signature": "pub fun join(self, other: str) -> Path",
+    "params": [
+     "other: str"
+    ],
+    "returns": "Path",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "absolute",
+    "module": "std::path",
+    "pub": true,
+    "owner": "Path",
+    "signature": "pub fun absolute(self) -> Path",
+    "params": [],
+    "returns": "Path",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "canonical",
+    "module": "std::path",
+    "pub": true,
+    "owner": "Path",
+    "signature": "pub fun canonical(self) -> Path",
+    "params": [],
+    "returns": "Path",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "to_string",
+    "module": "std::path",
+    "pub": true,
+    "owner": "Path",
+    "signature": "pub fun to_string(self) -> String",
+    "params": [],
+    "returns": "String",
+    "doc": ""
+   }
+  ],
+  "process": [
+   {
+    "kind": "struct",
+    "name": "Process",
+    "module": "std::process",
+    "pub": true,
+    "doc": "",
+    "signature": "struct Process"
+   },
+   {
+    "kind": "field",
+    "name": "handle",
+    "module": "std::process",
+    "owner": "Process",
+    "pub": true,
+    "returns": "*u8",
+    "signature": "handle: *u8",
+    "doc": ""
+   },
+   {
+    "kind": "struct",
+    "name": "ProcessResult",
+    "module": "std::process",
+    "pub": true,
+    "doc": "",
+    "signature": "struct ProcessResult"
+   },
+   {
+    "kind": "field",
+    "name": "exit_code",
+    "module": "std::process",
+    "owner": "ProcessResult",
+    "pub": true,
+    "returns": "i32",
+    "signature": "exit_code: i32",
+    "doc": ""
+   },
+   {
+    "kind": "field",
+    "name": "stdout",
+    "module": "std::process",
+    "owner": "ProcessResult",
+    "pub": true,
+    "returns": "String",
+    "signature": "stdout: String",
+    "doc": ""
+   },
+   {
+    "kind": "field",
+    "name": "stderr",
+    "module": "std::process",
+    "owner": "ProcessResult",
+    "pub": true,
+    "returns": "String",
+    "signature": "stderr: String",
+    "doc": ""
+   },
+   {
+    "kind": "associated",
+    "name": "new",
+    "module": "std::process",
+    "pub": true,
+    "owner": "Process",
+    "signature": "pub fun new(program: str) -> Process",
+    "params": [
+     "program: str"
+    ],
+    "returns": "Process",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "arg",
+    "module": "std::process",
+    "pub": true,
+    "owner": "Process",
+    "signature": "pub fun arg(mut self, value: str) -> bool",
+    "params": [
+     "value: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "args",
+    "module": "std::process",
+    "pub": true,
+    "owner": "Process",
+    "signature": "pub fun args(mut self, values: Vec<String>) -> bool",
+    "params": [
+     "values: Vec<String>"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "env",
+    "module": "std::process",
+    "pub": true,
+    "owner": "Process",
+    "signature": "pub fun env(mut self, name: str, value: str) -> bool",
+    "params": [
+     "name: str",
+     "value: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "cwd",
+    "module": "std::process",
+    "pub": true,
+    "owner": "Process",
+    "signature": "pub fun cwd(mut self, path: str) -> bool",
+    "params": [
+     "path: str"
+    ],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "spawn",
+    "module": "std::process",
+    "pub": true,
+    "owner": "Process",
+    "signature": "pub fun spawn(mut self) -> bool",
+    "params": [],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "wait",
+    "module": "std::process",
+    "pub": true,
+    "owner": "Process",
+    "signature": "pub fun wait(mut self) -> i32",
+    "params": [],
+    "returns": "i32",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "kill",
+    "module": "std::process",
+    "pub": true,
+    "owner": "Process",
+    "signature": "pub fun kill(mut self) -> bool",
+    "params": [],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "run",
+    "module": "std::process",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun run(program: str) -> i32",
+    "params": [
+     "program: str"
+    ],
+    "returns": "i32",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "run_capture",
+    "module": "std::process",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun run_capture(program: str) -> ProcessResult",
+    "params": [
+     "program: str"
+    ],
+    "returns": "ProcessResult",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "run_capture_args",
+    "module": "std::process",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun run_capture_args(program: str, arguments: Vec<String>) -> ProcessResult",
+    "params": [
+     "program: str",
+     "arguments: Vec<String>"
+    ],
+    "returns": "ProcessResult",
+    "doc": ""
+   },
+   {
+    "kind": "associated",
+    "name": "run",
+    "module": "std::process",
+    "pub": true,
+    "owner": "Process",
+    "signature": "pub fun run(program: str) -> i32",
+    "params": [
+     "program: str"
+    ],
+    "returns": "i32",
+    "doc": ""
+   },
+   {
+    "kind": "associated",
+    "name": "run_capture",
+    "module": "std::process",
+    "pub": true,
+    "owner": "Process",
+    "signature": "pub fun run_capture(program: str) -> ProcessResult",
+    "params": [
+     "program: str"
+    ],
+    "returns": "ProcessResult",
+    "doc": ""
+   },
+   {
+    "kind": "associated",
+    "name": "run_capture_args",
+    "module": "std::process",
+    "pub": true,
+    "owner": "Process",
+    "signature": "pub fun run_capture_args(program: str, arguments: Vec<String>) -> ProcessResult",
+    "params": [
+     "program: str",
+     "arguments: Vec<String>"
+    ],
+    "returns": "ProcessResult",
+    "doc": ""
+   }
+  ],
+  "result": [],
+  "system": [
+   {
+    "kind": "function",
+    "name": "os",
+    "module": "std::system",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun os() -> String",
+    "params": [],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "arch",
+    "module": "std::system",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun arch() -> String",
+    "params": [],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "cpu_count",
+    "module": "std::system",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun cpu_count() -> u32",
+    "params": [],
+    "returns": "u32",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "hostname",
+    "module": "std::system",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun hostname() -> String",
+    "params": [],
+    "returns": "String",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "exit",
+    "module": "std::system",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun exit(code: i32)",
+    "params": [
+     "code: i32"
+    ],
+    "returns": "",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "panic",
+    "module": "std::system",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun panic(message: str)",
+    "params": [
+     "message: str"
+    ],
+    "returns": "",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "assert",
+    "module": "std::system",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun assert(condition: bool)",
+    "params": [
+     "condition: bool"
+    ],
+    "returns": "",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "assert_message",
+    "module": "std::system",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun assert_message(condition: bool, message: str)",
+    "params": [
+     "condition: bool",
+     "message: str"
+    ],
+    "returns": "",
+    "doc": ""
+   }
+  ],
+  "thread": [
+   {
+    "kind": "struct",
+    "name": "Thread",
+    "module": "std::thread",
+    "pub": true,
+    "doc": "",
+    "signature": "struct Thread"
+   },
+   {
+    "kind": "field",
+    "name": "handle",
+    "module": "std::thread",
+    "owner": "Thread",
+    "pub": true,
+    "returns": "*u8",
+    "signature": "handle: *u8",
+    "doc": ""
+   },
+   {
+    "kind": "associated",
+    "name": "spawn",
+    "module": "std::thread",
+    "pub": true,
+    "owner": "Thread",
+    "signature": "pub fun spawn(worker: extern \"C\" fun()) -> Thread",
+    "params": [
+     "worker: extern \"C\" fun()"
+    ],
+    "returns": "Thread",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "join",
+    "module": "std::thread",
+    "pub": true,
+    "owner": "Thread",
+    "signature": "pub fun join(mut self) -> bool",
+    "params": [],
+    "returns": "bool",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "id",
+    "module": "std::thread",
+    "pub": true,
+    "owner": "Thread",
+    "signature": "pub fun id(self) -> u64",
+    "params": [],
+    "returns": "u64",
+    "doc": ""
+   }
+  ],
+  "time": [
+   {
+    "kind": "function",
+    "name": "sleep",
+    "module": "std::time",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun sleep(duration_ms: u64)",
+    "params": [
+     "duration_ms: u64"
+    ],
+    "returns": "",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "unix",
+    "module": "std::time",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun unix() -> f64",
+    "params": [],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "instant_now",
+    "module": "std::time",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun instant_now() -> f64",
+    "params": [],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "monotonic",
+    "module": "std::time",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun monotonic() -> f64",
+    "params": [],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "instant_elapsed",
+    "module": "std::time",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun instant_elapsed(started_at_monotonic_seconds: f64) -> f64",
+    "params": [
+     "started_at_monotonic_seconds: f64"
+    ],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "function",
+    "name": "yield_thread",
+    "module": "std::time",
+    "pub": true,
+    "owner": "",
+    "signature": "pub fun yield_thread()",
+    "params": [],
+    "returns": "",
+    "doc": ""
+   },
+   {
+    "kind": "struct",
+    "name": "Instant",
+    "module": "std::time",
+    "pub": true,
+    "doc": "",
+    "signature": "struct Instant"
+   },
+   {
+    "kind": "field",
+    "name": "started_at_monotonic_seconds",
+    "module": "std::time",
+    "owner": "Instant",
+    "pub": true,
+    "returns": "f64",
+    "signature": "started_at_monotonic_seconds: f64",
+    "doc": ""
+   },
+   {
+    "kind": "associated",
+    "name": "now",
+    "module": "std::time",
+    "pub": true,
+    "owner": "Instant",
+    "signature": "pub fun now() -> Instant",
+    "params": [],
+    "returns": "Instant",
+    "doc": ""
+   },
+   {
+    "kind": "method",
+    "name": "elapsed",
+    "module": "std::time",
+    "pub": true,
+    "owner": "Instant",
+    "signature": "pub fun elapsed(self) -> f64",
+    "params": [],
+    "returns": "f64",
+    "doc": ""
+   },
+   {
+    "kind": "struct",
+    "name": "Time",
+    "module": "std::time",
+    "pub": true,
+    "doc": "",
+    "signature": "struct Time"
+   },
+   {
+    "kind": "field",
+    "name": "unix_seconds",
+    "module": "std::time",
+    "owner": "Time",
+    "pub": true,
+    "returns": "f64",
+    "signature": "unix_seconds: f64",
+    "doc": ""
+   },
+   {
+    "kind": "associated",
+    "name": "now",
+    "module": "std::time",
+    "pub": true,
+    "owner": "Time",
+    "signature": "pub fun now() -> Time",
+    "params": [],
+    "returns": "Time",
+    "doc": ""
+   },
+   {
+    "kind": "associated",
+    "name": "unix",
+    "module": "std::time",
+    "pub": true,
+    "owner": "Time",
+    "signature": "pub fun unix() -> f64",
+    "params": [],
+    "returns": "f64",
+    "doc": ""
+   }
+  ]
+ }
+}

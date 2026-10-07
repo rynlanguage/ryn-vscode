@@ -1,0 +1,199 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Ryn",
+  "scopeName": "source.ryn",
+  "fileTypes": ["ryn"],
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#attributes" },
+    { "include": "#strings" },
+    { "include": "#chars" },
+    { "include": "#declarations" },
+    { "include": "#keywords" },
+    { "include": "#types" },
+    { "include": "#constants" },
+    { "include": "#numbers" },
+    { "include": "#paths" },
+    { "include": "#calls" },
+    { "include": "#operators" },
+    { "include": "#punctuation" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.ryn",
+          "begin": "//",
+          "beginCaptures": { "0": { "name": "punctuation.definition.comment.ryn" } },
+          "end": "$"
+        },
+        { "include": "#block-comment" }
+      ]
+    },
+    "block-comment": {
+      "name": "comment.block.ryn",
+      "begin": "/\\*",
+      "beginCaptures": { "0": { "name": "punctuation.definition.comment.begin.ryn" } },
+      "end": "\\*/",
+      "endCaptures": { "0": { "name": "punctuation.definition.comment.end.ryn" } },
+      "patterns": [{ "include": "#block-comment" }]
+    },
+    "attributes": {
+      "name": "meta.attribute.ryn",
+      "begin": "#\\[",
+      "beginCaptures": { "0": { "name": "punctuation.definition.attribute.ryn" } },
+      "end": "\\]",
+      "endCaptures": { "0": { "name": "punctuation.definition.attribute.ryn" } },
+      "patterns": [
+        {
+          "match": "\\b(repr|drop|derive)\\b",
+          "name": "entity.name.function.attribute.ryn"
+        },
+        { "match": "\\b[A-Z][A-Za-z0-9_]*\\b", "name": "entity.name.type.trait.ryn" },
+        { "match": "\\b[a-z_][A-Za-z0-9_]*\\b", "name": "variable.parameter.attribute.ryn" },
+        { "include": "#strings" }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.ryn",
+      "begin": "\"",
+      "beginCaptures": { "0": { "name": "punctuation.definition.string.begin.ryn" } },
+      "end": "\"",
+      "endCaptures": { "0": { "name": "punctuation.definition.string.end.ryn" } },
+      "patterns": [
+        { "match": "\\\\[0nrt\"\\\\]", "name": "constant.character.escape.ryn" },
+        { "match": "\\\\.", "name": "invalid.illegal.escape.ryn" },
+        {
+          "name": "meta.interpolation.ryn",
+          "match": "(\\{)([A-Za-z_][A-Za-z0-9_]*(?:\\.[A-Za-z_][A-Za-z0-9_]*)*)(\\})",
+          "captures": {
+            "1": { "name": "punctuation.section.interpolation.begin.ryn" },
+            "2": { "name": "variable.other.interpolated.ryn" },
+            "3": { "name": "punctuation.section.interpolation.end.ryn" }
+          }
+        }
+      ]
+    },
+    "chars": {
+      "name": "string.quoted.single.char.ryn",
+      "match": "'(?:\\\\[0nrt'\"\\\\]|[^'\\\\])'"
+    },
+    "declarations": {
+      "patterns": [
+        {
+          "match": "\\b(fun)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+          "captures": {
+            "1": { "name": "keyword.declaration.function.ryn storage.type.function.ryn" },
+            "2": { "name": "entity.name.function.ryn" }
+          }
+        },
+        {
+          "match": "\\b(struct|enum|shape|type|extend|namespace)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+          "captures": {
+            "1": { "name": "keyword.declaration.type.ryn storage.type.ryn" },
+            "2": { "name": "entity.name.type.ryn" }
+          }
+        },
+        {
+          "match": "\\b(const)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+          "captures": {
+            "1": { "name": "storage.modifier.const.ryn" },
+            "2": { "name": "variable.other.constant.ryn" }
+          }
+        },
+        {
+          "match": "\\b(use)\\s+([A-Za-z_][A-Za-z0-9_]*(?:::[A-Za-z_][A-Za-z0-9_]*)*)",
+          "captures": {
+            "1": { "name": "keyword.other.use.ryn" },
+            "2": { "name": "entity.name.namespace.ryn" }
+          }
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\b(when|else|while|for|in|break|continue|return|choose)\\b",
+          "name": "keyword.control.ryn"
+        },
+        { "match": "\\b(echo)\\b", "name": "keyword.other.echo.ryn support.function.builtin.ryn" },
+        { "match": "\\b(as)\\b", "name": "keyword.operator.cast.ryn" },
+        { "match": "\\b(pub|mut|extern)\\b", "name": "storage.modifier.ryn" },
+        { "match": "\\b(fun)\\b", "name": "keyword.declaration.function.ryn storage.type.function.ryn" },
+        {
+          "match": "\\b(struct|enum|shape|type|extend|namespace|const|use)\\b",
+          "name": "storage.type.ryn"
+        },
+        { "match": "\\b(self)\\b", "name": "variable.language.self.ryn" },
+        { "match": "\\b(Self)\\b", "name": "entity.name.type.self.ryn" },
+        {
+          "match": "\\b(sizeof|alignof|load_library|load_symbol|unload_library|pointer_is_null)\\b(?=\\s*\\()",
+          "name": "support.function.builtin.ryn"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "match": "\\b(i8|i16|i32|i64|u8|u16|u32|u64|f32|f64|bool|char|str)\\b",
+          "name": "storage.type.primitive.ryn"
+        },
+        {
+          "match": "\\b(String|Vec|Map|HashMap|Set|Option|Result)\\b",
+          "name": "support.type.builtin.ryn"
+        },
+        { "match": "\\b[A-Z][A-Za-z0-9_]*[a-z][A-Za-z0-9_]*\\b", "name": "entity.name.type.ryn" }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        { "match": "\\b(true|false)\\b", "name": "constant.language.boolean.ryn" },
+        { "match": "\\b(Some|None|Ok|Err)\\b", "name": "support.constant.variant.ryn" },
+        { "match": "\\b[A-Z][A-Z0-9_]+\\b", "name": "variable.other.constant.ryn" }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        { "match": "\\b0[xX][0-9A-Fa-f][0-9A-Fa-f_]*\\b", "name": "constant.numeric.hex.ryn" },
+        { "match": "\\b0[bB][01][01_]*\\b", "name": "constant.numeric.binary.ryn" },
+        {
+          "match": "\\b([0-9][0-9_]*)(ms|min|s|h)\\b",
+          "captures": {
+            "1": { "name": "constant.numeric.integer.ryn" },
+            "2": { "name": "keyword.other.unit.duration.ryn" }
+          }
+        },
+        { "match": "\\b[0-9][0-9_]*\\.[0-9][0-9_]*(?:[eE][+-]?[0-9]+)?\\b", "name": "constant.numeric.float.ryn" },
+        { "match": "\\b[0-9][0-9_]*\\b", "name": "constant.numeric.integer.ryn" }
+      ]
+    },
+    "paths": {
+      "match": "\\b([a-z_][A-Za-z0-9_]*)(::)",
+      "captures": {
+        "1": { "name": "entity.name.namespace.ryn" },
+        "2": { "name": "punctuation.separator.namespace.ryn" }
+      }
+    },
+    "calls": {
+      "match": "\\b([a-z_][A-Za-z0-9_]*)\\s*(?=\\()",
+      "captures": { "1": { "name": "entity.name.function.call.ryn" } }
+    },
+    "operators": {
+      "patterns": [
+        { "match": ":=", "name": "keyword.operator.declaration.ryn" },
+        { "match": "=>|->", "name": "keyword.operator.arrow.ryn" },
+        { "match": "&raw\\b", "name": "keyword.operator.raw-reference.ryn" },
+        { "match": "==|!=|<=|>=|&&|\\|\\||!", "name": "keyword.operator.logical.ryn" },
+        { "match": "<<|>>|\\+=|-=|\\*=|/=|%=|[-+*/%&|^<>=?]", "name": "keyword.operator.ryn" }
+      ]
+    },
+    "punctuation": {
+      "patterns": [
+        { "match": "::", "name": "punctuation.separator.namespace.ryn" },
+        { "match": "[,;]", "name": "punctuation.separator.ryn" },
+        { "match": "\\.", "name": "punctuation.accessor.ryn" },
+        { "match": "[{}()\\[\\]]", "name": "punctuation.brackets.ryn" }
+      ]
+    }
+  }
+}

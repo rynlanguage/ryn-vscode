@@ -1,0 +1,115 @@
+{
+  "name": "ryn-lang",
+  "displayName": "Ryn",
+  "description": "Ryn language support: syntax highlighting, completion, hover, signature help, go to definition, outline, and ryn check diagnostics.",
+  "version": "0.1.0",
+  "publisher": "rynlanguage",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rynlanguage/ryn-vscode.git"
+  },
+  "homepage": "https://ryn-lang.xyz",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "keywords": [
+    "ryn",
+    "rynix",
+    "syntax",
+    "completion"
+  ],
+  "main": "./src/extension.js",
+  "activationEvents": [
+    "onLanguage:ryn",
+    "workspaceContains:**/ryn.yaml"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ryn",
+        "aliases": [
+          "Ryn",
+          "ryn"
+        ],
+        "extensions": [
+          ".ryn"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ryn",
+        "scopeName": "source.ryn",
+        "path": "./syntaxes/ryn.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "ryn",
+        "path": "./snippets/ryn.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "ryn.run",
+        "title": "Ryn: Run Project"
+      },
+      {
+        "command": "ryn.build",
+        "title": "Ryn: Build Project"
+      },
+      {
+        "command": "ryn.check",
+        "title": "Ryn: Check Current File"
+      },
+      {
+        "command": "ryn.reindex",
+        "title": "Ryn: Re-index Workspace"
+      }
+    ],
+    "menus": {
+      "editor/title/run": [
+        {
+          "command": "ryn.run",
+          "when": "editorLangId == ryn",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Ryn",
+      "properties": {
+        "ryn.path": {
+          "type": "string",
+          "default": "ryn",
+          "description": "Path to the ryn compiler used for diagnostics and the Run/Build commands."
+        },
+        "ryn.check.onSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Run `ryn check` on the project when a .ryn file is opened or saved."
+        },
+        "ryn.completion.insertParentheses": {
+          "type": "boolean",
+          "default": true,
+          "description": "Insert `()` after completed functions and methods."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "test": "node test/resolve.test.js && node test/diagnostics.test.js && node test/grammar.test.js",
+    "gen-std": "node tools/gen-std.js",
+    "package": "npx --yes @vscode/vsce package --no-dependencies",
+    "test:host": "node test/host/run.js"
+  },
+  "devDependencies": {
+    "@vscode/test-electron": "^2.4.0"
+  }
+}

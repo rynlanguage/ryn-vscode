@@ -1,0 +1,124 @@
+{
+  "main": {
+    "prefix": "main",
+    "body": ["fun main() {", "\t$0", "}"],
+    "description": "Program entry point"
+  },
+  "main returning exit code": {
+    "prefix": "maini",
+    "body": ["fun main() -> i32 {", "\t$0", "\treturn 0", "}"],
+    "description": "Entry point whose i32 result becomes the exit code"
+  },
+  "fun": {
+    "prefix": "fun",
+    "body": ["fun ${1:name}(${2}) -> ${3:i32} {", "\t$0", "}"],
+    "description": "Function"
+  },
+  "pub fun": {
+    "prefix": "pfun",
+    "body": ["pub fun ${1:name}(${2}) -> ${3:i32} {", "\t$0", "}"],
+    "description": "Public function"
+  },
+  "expression fun": {
+    "prefix": "funx",
+    "body": ["fun ${1:name}(${2}) -> ${3:i32} => ${0:value}"],
+    "description": "Single-expression function"
+  },
+  "method": {
+    "prefix": "method",
+    "body": ["pub fun ${1:name}(${2|self,mut self|}${3}) -> ${4:i32} {", "\t$0", "}"],
+    "description": "Method inside extend"
+  },
+  "struct": {
+    "prefix": "struct",
+    "body": ["pub struct ${1:Name} {", "\tpub ${2:field}: ${3:i32},", "}"],
+    "description": "Structure"
+  },
+  "struct with extend": {
+    "prefix": "type",
+    "body": [
+      "pub struct ${1:Name} {",
+      "\tpub ${2:field}: ${3:i32},",
+      "}",
+      "",
+      "extend ${1:Name} {",
+      "\tpub fun new(${2:field}: ${3:i32}) -> ${1:Name} => ${1:Name} { ${2:field}: ${2:field} }",
+      "\t$0",
+      "}"
+    ],
+    "description": "Structure with constructor"
+  },
+  "extend": {
+    "prefix": "extend",
+    "body": ["extend ${1:Type} {", "\t$0", "}"],
+    "description": "Attach methods to a type"
+  },
+  "enum": {
+    "prefix": "enum",
+    "body": ["enum ${1:Name} {", "\t${2:First},", "\t${3:Second},", "}"],
+    "description": "Enumeration"
+  },
+  "when": {
+    "prefix": "when",
+    "body": ["when ${1:condition} {", "\t$0", "}"],
+    "description": "Conditional"
+  },
+  "when else": {
+    "prefix": "whenelse",
+    "body": ["when ${1:condition} {", "\t$2", "} else {", "\t$0", "}"],
+    "description": "Conditional with else"
+  },
+  "while": {
+    "prefix": "while",
+    "body": ["while ${1:condition} {", "\t$0", "}"],
+    "description": "Loop while a condition holds"
+  },
+  "for": {
+    "prefix": "for",
+    "body": ["for ${1:item} in ${2:items} {", "\t$0", "}"],
+    "description": "Iterate a collection"
+  },
+  "choose": {
+    "prefix": "choose",
+    "body": ["choose ${1:value} {", "\t${2:Option::Some}(${3:inner}) => ${4:inner},", "\t_ => ${0:fallback},", "}"],
+    "description": "Pattern match"
+  },
+  "drop struct": {
+    "prefix": "dropstruct",
+    "body": [
+      "#[drop(drop_${1/(.*)/${1:/downcase}/})]",
+      "pub struct ${1:Handle} {",
+      "\thandle: *u8,",
+      "}",
+      "",
+      "fun drop_${1/(.*)/${1:/downcase}/}(value: ${1:Handle}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Move-only resource handle with a destructor"
+  },
+  "rynix window loop": {
+    "prefix": "rynixwindow",
+    "body": [
+      "use rynix::graphics",
+      "use rynix::math",
+      "use rynix::time",
+      "use rynix::window",
+      "",
+      "fun main() {",
+      "\tmut window := window::Window::open(${1:1280}, ${2:720}, \"${3:My Ryn game}\")",
+      "\twhen !window.is_open() { return }",
+      "\tmut gpu := graphics::Gpu::open(window.native_handle())",
+      "\tmut clock := time::Clock::start()",
+      "\twhile window.poll_events_for(1) {",
+      "\t\tdt := clock.tick()",
+      "\t\twhen window.key_down(window::KeyCode::ESCAPE) { window.close() }",
+      "\t\tframe := gpu.begin()",
+      "\t\tframe.clear(math::Color::DARK_GRAY)",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ],
+    "description": "Rynix window, GPU and frame loop"
+  }
+}
